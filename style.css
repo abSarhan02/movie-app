@@ -1,0 +1,198 @@
+/* RESET START */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+}
+
+/* RESET END */
+
+/* ROOT START */
+:root {
+  --dark-100: #1b1919;
+  --violet: #b6acea;
+}
+
+/* GENERAL START */
+img {
+  width: 100%;
+}
+
+/* GENERAL END */
+
+/* BODY START */
+body {
+  background-color: var(--dark-100);
+}
+
+/* BODY END */
+
+/* NAV START */
+nav {
+  box-shadow: 1px 5px 15px rgba(8, 8, 8, 0.556);
+  z-index: 10;
+  color: white;
+}
+
+.nav-top {
+  transition: 0.35s;
+}
+
+.nav-top:hover {
+  scale: 1.05;
+}
+
+nav i {
+  color: white;
+  margin: 0.3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+nav i:hover {
+  color: var(--violet);
+
+}
+
+nav {
+  box-shadow: 1px 1px 10px var(--violet);
+}
+
+#hidden-nav ul {
+  box-shadow: 1px 1px 10px var(--violet);
+}
+
+#hidden-nav li {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+#hidden-nav li:hover {
+  color: var(--violet);
+}
+
+nav img {
+  width: 40px;
+  cursor: pointer;
+  filter: drop-shadow(1px 2px 3px #c4bbf0);
+}
+
+/* NAV END */
+/* CARD START */
+.cardImage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.cardImage img {
+  transition: all 0.5s;
+  width: 100%;
+  height: auto;
+}
+
+.cardImage img.animate {
+  transform: rotate(5deg) scale(1.25);
+  filter: blur(3px);
+}
+
+/* OVERLAY START */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.overlay .date {
+  font-style: italic;
+  color: white;
+}
+
+.overlay .desc {
+  color: white;
+  margin: 10px 0;
+}
+
+.overlay .vote {
+  font-size: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+/* CARD START */
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.35s;
+}
+
+.card:hover .cardImage img {
+  filter: brightness(0.8) blur(2px);
+  transform: scale(1.2) rotate(10deg);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.search-container {
+  position: relative;
+}
+
+#clear-search {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+#clear-search:hover {
+  color: #333;
+}
+
+#search-input::placeholder {
+  color: white;
+}
+
+.form-control:focus {
+  border-color: var(--violet);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--violet);
+}
